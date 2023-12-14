@@ -763,6 +763,11 @@ section.full-heigth {
     align-items: center;
 }
 
+.w-100 {
+    width: 100%;
+    height: auto;
+}
+
 .portfolio-wrapper.content img {
     max-width: 100%;
     height: auto;
@@ -827,4 +832,50 @@ section.full-heigth {
 #fp-nav ul li a.active span,
 #fp-nav ul li:hover a.active span {
     background: var(--ill-color);
+}
+
+
+.video-container {
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+video {
+    width: calc(100% + 2px);
+    margin-left: -1px;
+    height: auto;
+    display: block;
+}
+
+.controlled-video {
+    cursor: pointer;
+}
+
+.controlled-video.played .btn-video-control {
+    display: none;
+}
+
+.btn-video-control {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 16px;
+    color: #ffffff;
+}
+
+.btn-video-control img {
+    width: 32px !important;
+    height: 32px !important;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.btn-video-control svg {
+    fill: #ffffff;
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+    cursor: pointer;
 }

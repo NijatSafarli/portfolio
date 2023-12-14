@@ -50,4 +50,24 @@
             document.querySelector('.scroll-down-arrow').classList.remove('fade');
         }
     });
+
+    // Video player
+    let videos = Array.from(document.querySelectorAll(".controlled-video"));
+
+    videos && videos.forEach(video => {
+        video.addEventListener('click', function (e) {
+            e.stopPropagation()
+            if (video.classList.contains('played')) {
+                video.querySelector('video').pause()
+                video.classList.remove('played')
+                video.classList.add('paused')
+            } else {
+                video.querySelector('video').play()
+                video.classList.remove('paused')
+                video.classList.add('played')
+            }
+        })
+    })
+
+
 })()
